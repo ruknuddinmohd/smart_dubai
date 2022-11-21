@@ -72,7 +72,7 @@ public class BookController {
     public ResponseEntity<String> updateBook(@RequestBody Book book){
         log.info("BookController :: updateBook() starts here:");
         Book isbookSaved = null;
-        if(null != book)
+        if(null != book && null != book.getId())
             isbookSaved = service.updateBook(book);
         return ResponseEntity.ok()
                 .body(isbookSaved !=null ? "Book has been updated" : "Bad request");
