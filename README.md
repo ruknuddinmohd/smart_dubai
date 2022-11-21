@@ -1,9 +1,7 @@
 # smart_dubai 
 
 
-
-
-
+Below are the steps as an input on how to build image and run application:
 
 
 ## Step 1:
@@ -71,6 +69,8 @@ For API's Customers:
 
 3.API for Checkout Books with or without Promo code
 
+Note : If promotion code given as "PROMO CODE",10% of discount on fiction book is applied and 0% on comics as per the requirement.Else,discount is not applicable on any category of books if no promo code applied.
+
     HTTP Method: POST
     URL: http://localhost:9091/app/books/checkout
     Payload : {
@@ -129,7 +129,8 @@ For API's Admin:
 
 ## Step 4:
 
-Build CI/CD pipeline using GitHub action.
+CI/CD pipeline has been built through GitHub actions.This was achieved to demonstrate below feature :
+If any of the test cases fail,then build gets failed.Though not an deliverable asked for this task,It was done additionaly to showcase CI/CD pipeline feature which is one of the best practices i usually follow:
 
 1.  Github action workflow:
 
